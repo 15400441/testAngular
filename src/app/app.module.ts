@@ -14,8 +14,10 @@ import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroSearchComponent }  from './hero-search/hero-search.component';
 import { HeroService }          from './hero.service';
+import { CustomerService }          from './customer.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
+import { CustomersComponent }      from './customers/customers.component';
 
 @NgModule({
   imports: [
@@ -37,9 +39,10 @@ import { MessagesComponent }    from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    CustomersComponent
   ],
-  providers: [ HeroService, MessageService ],
+  providers: [ HeroService, MessageService,CustomerService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

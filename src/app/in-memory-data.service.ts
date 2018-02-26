@@ -17,7 +17,8 @@ export class InMemoryDataService implements InMemoryDbService {
 
     const customers=[
     {id:1,name:"customer1"},
-    {id:2,name:"customer2"}
+    {id:2,name:"customer2"},
+    {id:3,name:"customer3"}
 
 
 
