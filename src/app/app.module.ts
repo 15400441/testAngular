@@ -1,4 +1,4 @@
-import { NgModule }       from '@angular/core';
+import { NgModule ,NO_ERRORS_SCHEMA }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
@@ -22,7 +22,7 @@ import { CustomersComponent }      from './customers/customers.component';
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, 
     AppRoutingModule,
     HttpClientModule,
 
@@ -33,6 +33,7 @@ import { CustomersComponent }      from './customers/customers.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
+  
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -43,6 +44,7 @@ import { CustomersComponent }      from './customers/customers.component';
     CustomersComponent
   ],
   providers: [ HeroService, MessageService,CustomerService ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -11,5 +11,12 @@ describe('MessageService', () => {
 
   it('should be created', inject([MessageService], (service: MessageService) => {
     expect(service).toBeTruthy();
+    
   }));
+
+  it('get value', inject([MessageService], (service: MessageService) => {
+    
+    expect(service.get()).toBe("result");
+  }));
+
 });

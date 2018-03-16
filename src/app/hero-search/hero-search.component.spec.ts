@@ -1,6 +1,12 @@
+
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroSearchComponent } from './hero-search.component';
+
+import { NO_ERRORS_SCHEMA} from '@angular/core';
+
+import { HeroService } from '../hero.service';
 
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
@@ -8,7 +14,9 @@ describe('HeroSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroSearchComponent ]
+      declarations: [ HeroSearchComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ],
+      providers:[HeroService]
     })
     .compileComponents();
   }));
@@ -19,7 +27,7 @@ describe('HeroSearchComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+ 
 });
+
+
