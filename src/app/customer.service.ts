@@ -20,7 +20,7 @@ export class CustomerService{
 
 	getCustomers():Observable<Object>{
 		return this.http.get<Object>(this.customersUrl).pipe(
-			tap(heroes=> console.log("get customers")),
+			tap(customers=> console.log("get customers")),
 			catchError(this.handleError("getHeroes",[]))
 
 			);

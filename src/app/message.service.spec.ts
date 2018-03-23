@@ -19,4 +19,12 @@ describe('MessageService', () => {
     expect(service.get()).toBe("result");
   }));
 
+   it('spy on get()', inject([MessageService], (service: MessageService) => {
+    spyOn(service,"get");
+    service.get();
+    expect(service.get).toHaveBeenCalledTimes(1);
+  }));
+
+
+
 });
